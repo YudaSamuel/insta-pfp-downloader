@@ -50,7 +50,7 @@ async function fetchInstagramData(username) {
     const userIdMatch = htmlContent.match(/"user_id"\s*:\s*"([^"]+)"/);
 
     if (!queryIdMatch || !userIdMatch) {
-      throw new Error("(query_id veya user_id) not found");
+      throw new Error("(query_id, user_id) not found");
     }
 
     const dynamicQueryId = queryIdMatch[1];
